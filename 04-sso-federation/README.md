@@ -1,39 +1,77 @@
-# SSO Federation Lab
+# SSO Federation Lab (SAML)
 
-This project demonstrates the configuration and validation of Single Sign-On (SSO) using federation protocols within a Microsoft Entra ID environment.
+## Overview
+This lab demonstrates configuring Single Sign-On (SSO) federation between a Service Provider and Microsoft Entra ID using the SAML protocol.
 
-The lab focuses on implementing identity federation and validating authentication flows between identity providers and applications.
+The goal of this project was to simulate a real-world enterprise application onboarding process where Entra ID acts as the Identity Provider (IdP) and issues SAML assertions to an external application.
 
-## Objectives
+---
 
-• Configure SAML / OIDC based federation  
-• Validate identity tokens issued by the identity provider  
-• Test authentication flows between applications and Entra ID  
-• Document troubleshooting scenarios related to federation failures  
+## Architecture
+User → Entra ID → SAML Assertion → Service Provider
 
-## Environment
+---
 
-Identity Provider: Microsoft Entra ID  
-Protocols: SAML 2.0 and OpenID Connect  
-Authentication Source: Hybrid Active Directory  
+## Configuration Steps
+1. Created an **Enterprise Application** in Microsoft Entra ID.
+2. Configured **SAML-based Single Sign-On**.
+3. Defined **Entity ID and Reply URL** for the Service Provider.
+4. Configured **user attributes and claims mapping**.
+5. Generated **token signing certificates**.
+6. Downloaded **federation metadata XML**.
+7. Assigned users to the application.
+8. Tested the SAML authentication flow.
 
-## Implementation
+---
 
-The federation process included:
+## Attributes and Claims Mapping
+The following claims were configured for the SAML token:
+- givenname
+- surname
+- emailaddress
+- name
+- userprincipalname
 
-• configuring application federation settings  
-• establishing trust relationships between identity providers  
-• validating authentication assertions  
-• testing SSO authentication flows  
+These claims are used by the Service Provider to identify authenticated users.
 
-## Validation
+---
 
-Users were able to authenticate once and gain access to federated applications without re-entering credentials.
+## Token Signing Certificate
+Microsoft Entra ID generated a **token signing certificate** used to sign the SAML assertion.
 
-Token issuance and authentication responses were validated to confirm successful federation.
+This ensures:
+- token integrity
+- trusted federation between IdP and Service Provider
 
-## Documentation
+---
 
-Detailed configuration steps and screenshots are available in:
+## Authentication Validation
+Successful SSO authentication was confirmed through:
+- SAML test sign-in
+- Entra ID sign-in logs
+- successful federation response from the Service Provider
 
-docs/evidence.md
+---
+
+## Screenshots
+
+### SAML Configuration
+*(Screenshot here: sso-saml-configuration.png)*
+
+### Token Signing Certificate and Federation Metadata
+*(Screenshot here: sso-certificate-metadata.png)*
+
+### Successful Entra ID Sign-in Log
+*(Screenshot here: sso-signin-log-success.png)*
+
+### Successful Federation Login to Service Provider
+*(Screenshot here: sso-federation-success.png)*
+
+---
+
+## Key IAM Concepts Demonstrated
+- SAML Federation
+- Identity Provider (IdP) / Service Provider (SP)
+- Claims-based authentication
+- Token signing certificates
+- Enterprise application onboarding

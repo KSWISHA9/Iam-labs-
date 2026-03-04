@@ -1,46 +1,109 @@
-# Conditional Access Security Baseline
+# Conditional Access and Identity Governance Lab
 
-This lab demonstrates the design and implementation of a Conditional Access security baseline using Microsoft Entra ID.
+## Overview
+This project demonstrates implementing a Zero Trust security baseline using Microsoft Entra ID Conditional Access and Identity Governance.
 
-The goal was to implement core Zero Trust access controls to protect identities, enforce MFA, and block insecure authentication methods.
+The environment simulates a real enterprise governance model including:
+- Access Packages
+- Access Reviews
+- Conditional Access policies
+- Microsoft Graph automation
 
-## Objectives
+---
 
-• Enforce multi-factor authentication for users  
-• Protect privileged accounts with stricter policies  
-• Block legacy authentication protocols  
-• Apply conditional access based on user and application context  
+## Architecture
+User → Entra ID → Conditional Access → Application Access  
+Identity Governance → Access Packages → Access Reviews → Periodic Validation
 
-## Environment
+---
 
-Platform: Microsoft Entra ID  
-Identity Source: Hybrid Active Directory environment  
-Authentication: Password Hash Sync  
+## Governance Automation (Microsoft Graph)
+Microsoft Graph PowerShell was used to automate governance configuration.
 
-## Policies Implemented
+The automation performed the following actions:
+1. Created an **Enterprise Governance Catalog**
+2. Registered **security groups as catalog resources**
+3. Created **Access Packages**
+4. Configured **Access Reviews**
+5. Generated a governance audit output
 
-### Global MFA Enforcement
-All users are required to register and use multi-factor authentication when accessing cloud applications.
+---
 
-### Admin Protection Policy
-Privileged role holders must authenticate with MFA and comply with stricter security controls.
+## Access Packages Created
+Finance Auditor Access  
+Read-only access to finance resources.
 
-### Legacy Authentication Block
-Legacy protocols such as IMAP, POP3, and other non-modern authentication methods are blocked.
+HR Confidential Access  
+Restricted access to sensitive HR systems.
 
-### Secure Access Validation
-Policies were tested against user logins to validate enforcement and access behavior.
+IT Privileged Operations  
+Privileged access for IT administrators.
 
-## Security Impact
+Each package included:
+- approval workflows
+- time-based access expiration
+- governance review capability
 
-These controls significantly reduce identity compromise risk by ensuring that:
+---
 
-• stolen passwords alone cannot grant access  
-• outdated authentication methods cannot be exploited  
-• administrative identities are protected with stronger verification  
+## Access Reviews
+An automated **quarterly access review** was created to ensure privileged access is periodically validated.
 
-## Documentation
+Review target: Finance Auditor group  
+Purpose: Prevent privilege creep and enforce least privilege.
 
-Evidence and screenshots are available in:
+---
 
-docs/evidence.md
+## Conditional Access Policy
+A Conditional Access policy was created requiring **Multi-Factor Authentication (MFA)** for external users.
+
+Policy configuration:
+- Users: Guests or external users
+- Applications: All cloud apps
+- Grant control: Require MFA
+- Mode: Report-only (for safe validation before enforcement)
+
+---
+
+## Screenshots
+
+### Identity Governance Catalog Creation
+*(Screenshot here: identity-governance-catalog-created.png)*
+
+### Access Review Creation
+*(Screenshot here: identity-governance-access-review.png)*
+
+### Access Review Confirmation
+*(Screenshot here: identity-governance-review-confirmation.png)*
+
+### Catalog State Verification
+*(Screenshot here: identity-governance-catalog-state.png)*
+
+### Resource Registration into Catalog
+*(Screenshot here: identity-governance-resource-registration.png)*
+
+### Access Packages Created
+*(Screenshot here: identity-governance-access-packages.png)*
+
+### Access Package Policy Configuration
+*(Screenshot here: identity-governance-policy-config.png)*
+
+### Conditional Access MFA Policy
+*(Screenshot here: conditional-access-mfa-policy.png)*
+
+### Conditional Access Policy Created
+*(Screenshot here: conditional-access-policy-created.png)*
+
+### Access Package Resource Roles
+*(Screenshot here: identity-governance-resource-roles.png)*
+
+---
+
+## Key IAM Concepts Demonstrated
+- Identity Governance
+- Access Packages
+- Access Reviews
+- Conditional Access
+- MFA enforcement
+- Microsoft Graph automation
+- Privileged access lifecycle management
