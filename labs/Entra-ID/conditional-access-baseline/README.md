@@ -1,9 +1,10 @@
-# conditional-access-baseline
+# Conditional Access Security Baseline
 
 ## Overview
-Coming soon — this lab is being rebuilt into an enterprise-style project structure.
+Zero Trust policy design with MFA enforcement and validation
 
 ## Status
-- [ ] Architecture
-- [ ] Implementation
-- [ ] Evidence (screenshots)
+This lab is being rebuilt into the standard portfolio structure:
+- Architecture
+- Implementation
+- Evidence (screenshots)

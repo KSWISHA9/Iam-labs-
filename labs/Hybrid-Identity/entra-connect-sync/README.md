@@ -1,9 +1,10 @@
-# entra-connect-sync
+# Hybrid Identity Sync Troubleshooting
 
 ## Overview
-Coming soon — this lab is being rebuilt into an enterprise-style project structure.
+Troubleshoot Entra Connect sync failures and attribute conflicts
 
 ## Status
-- [ ] Architecture
-- [ ] Implementation
-- [ ] Evidence (screenshots)
+This lab is being rebuilt into the standard portfolio structure:
+- Architecture
+- Implementation
+- Evidence (screenshots)

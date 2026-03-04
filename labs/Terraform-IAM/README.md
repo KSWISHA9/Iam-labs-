@@ -1,9 +1,10 @@
-# Terraform-IAM
+# Terraform IAM Infrastructure
 
 ## Overview
-Coming soon — this lab is being rebuilt into an enterprise-style project structure.
+Identity infrastructure-as-code patterns using Terraform
 
 ## Status
-- [ ] Architecture
-- [ ] Implementation
-- [ ] Evidence (screenshots)
+This lab is being rebuilt into the standard portfolio structure:
+- Architecture
+- Implementation
+- Evidence (screenshots)

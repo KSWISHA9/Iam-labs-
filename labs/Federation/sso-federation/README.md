@@ -1,9 +1,10 @@
-# sso-federation
+# SSO Federation Lab
 
 ## Overview
-Coming soon — this lab is being rebuilt into an enterprise-style project structure.
+SAML/OIDC federation configuration + troubleshooting runbook
 
 ## Status
-- [ ] Architecture
-- [ ] Implementation
-- [ ] Evidence (screenshots)
+This lab is being rebuilt into the standard portfolio structure:
+- Architecture
+- Implementation
+- Evidence (screenshots)

@@ -1,9 +1,10 @@
-# privileged-access-risk-dashboard
+# Privileged Access Risk Dashboard
 
 ## Overview
-Coming soon — this lab is being rebuilt into an enterprise-style project structure.
+Identity exposure analysis using Microsoft Graph
 
 ## Status
-- [ ] Architecture
-- [ ] Implementation
-- [ ] Evidence (screenshots)
+This lab is being rebuilt into the standard portfolio structure:
+- Architecture
+- Implementation
+- Evidence (screenshots)
