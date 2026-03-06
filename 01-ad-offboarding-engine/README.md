@@ -16,7 +16,7 @@ Manual offboarding processes often result in:
 ## Solution
 A PowerShell automation workflow performs the following:
 
-1. Identify user targeted for termination
+1. Identify the user targeted for termination
 2. Disable the account
 3. Remove all group memberships
 4. Move account to Terminated OU
