@@ -1,4 +1,5 @@
 # Hybrid Identity Architecture
+<img width="1550" height="659" alt="Screenshot 2026-03-06 161155" src="https://github.com/user-attachments/assets/7917f272-c195-4cca-8964-13271d6889ff" />
 
 Organization: Wolfpak Innovations
 
